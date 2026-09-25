@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "zcrm",
+  "version": "0.1.0",
+  "identifier": "com.nazmus.zcrm",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "CRM PRO",
+        "width": 1100,
+        "height": 750,
+        "resizable": false,
+        "maximizable": false,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  },
+  "plugins": {
+    "updater": {
+      "endpoints": [
+        "https://raw.githubusercontent.com/nazmus115/zcrm/main/updater.json"
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDNGODc4Rjk4OTE3NTgyQzkKUldUSmduV1JtSStIUDlKVkh4VWlZaThqSk5TNjBYNndmS3luYXJ2Wi9QTGRGRENmRXhGVzl3ZEcK"
+    }
+  }
+}
