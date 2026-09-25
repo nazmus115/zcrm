@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed, onMounted } from "vue";
 import { useCrm } from "../composables/useCrm";
-import { useI18n } from "vue-i18n";
+// import { useI18n } from "vue-i18n";
 
 const { clients, companies, isLoading, initializeData } = useCrm();
-const { t } = useI18n();
+// const { t } = useI18n();
 
 onMounted(async () => {
   if (clients.value.length === 0 || companies.value.length === 0) {
